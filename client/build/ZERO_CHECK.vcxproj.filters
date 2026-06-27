@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\barto\source\sae2\client\build\CMakeFiles\d69ba82481f744a8642a5d536722fa2a\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5CE4C81C-88A0-3138-B7BB-08910186F7AA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+C:/Users/barto/source/sae2/client/build/CMakeFiles/sae2_client.dir
+C:/Users/barto/source/sae2/client/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/barto/source/sae2/client/build/CMakeFiles/ZERO_CHECK.dir

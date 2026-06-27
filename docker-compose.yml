@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: sae2-backend
+    ports:
+      - "443:443"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongo:27017/sae2
+      - SSL_CERT_PATH=/cert/fullchain.pem
+      - SSL_KEY_PATH=/cert/privkey.pem
+    volumes:
+      - ./backend/.env:/app/.env
+      - ./cert:/cert:ro
+    depends_on:
+      - mongo
+    networks:
+      - sae2-network
+
+  mongo:
+    image: mongo:latest
+    container_name: sae2-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - sae2-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  sae2-network:
+    driver: bridge

@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   backend:
     build: ./backend
@@ -13,12 +11,11 @@ services:
       - SSL_KEY_PATH=/cert/privkey.pem
     volumes:
       - ./backend/.env:/app/.env
-      - ./cert:/cert:ro
+      - /cert:/cert:ro
     depends_on:
       - mongo
     networks:
       - sae2-network
-
   mongo:
     image: mongo:latest
     container_name: sae2-mongo
@@ -28,10 +25,8 @@ services:
       - mongodb_data:/data/db
     networks:
       - sae2-network
-
 volumes:
   mongodb_data:
-
 networks:
   sae2-network:
     driver: bridge
